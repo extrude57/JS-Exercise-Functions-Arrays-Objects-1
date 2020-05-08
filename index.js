@@ -83,8 +83,23 @@ function temperatureCtoF(c) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(tempp,typee) {
+  /* Self explanitory & Easy to follow */
+  var r = 0;
+  let result = '';
+  if (typee == 'C'){
+    r = temperatureCtoF(tempp);
+     result = r.toString();
+     result += 'F';
+
+  }else{
+    result = tempp.toString();
+    result += 'F';
+  }
+  return result;
+
+
+
 }
 
 
@@ -104,8 +119,11 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id,name,email) {
   /* code here */
+  let makePobj =  {'id' : id, 'name' : name, 'email' : email};
+  return makePobj;
+
 }
 
 /**
@@ -121,8 +139,13 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName(obj) {
   /* code here */
+  let name = obj.name;
+  let result = 'Hello, my name is ';
+  result = result+ name;
+  return result;
+
 }
 
 
