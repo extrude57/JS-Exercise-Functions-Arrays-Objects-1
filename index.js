@@ -164,8 +164,10 @@ function getName(obj) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
+function appleIndex(arr) {
   /* code here */
+  let result = arr.indexOf('apple');
+  return result;
 }
 
 /**
@@ -183,8 +185,21 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
+function isItAnApple(arr) {
   /* code here */
+  
+  let result = [];
+  
+  for(let v = 0;v < arr.length; v++){
+    if(arr[v] == 'apple'){
+      result[v] = true;
+    } else{
+      result[v] = false;
+    }
+  }
+  return result;
+
+
 }
 
 
@@ -243,6 +258,10 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+let result = inventory[index];
+
+return `This is a ${result.car_make} ${result.car_model}`;
+
 }
 
 /**
